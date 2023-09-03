@@ -4,7 +4,6 @@ const Item = ({id, title, image, price, stock}) => {
 
     return(
         <article className="">
-            <div className="" >
                 <div className="card m-5" style={{width: '20rem'}}>
                 <img src={image} class="card-img-top" alt={title}/>
                     <div className="card-body">
@@ -14,7 +13,6 @@ const Item = ({id, title, image, price, stock}) => {
                     <Link className="btn btn-primary" to={`/item/${id}`}>Ver detalle</Link>
                     </div>
                 </div>
-            </div>
         </article>
     )
 }
