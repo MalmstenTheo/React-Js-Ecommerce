@@ -18,41 +18,41 @@ const handleConfirm = (event) => {
     };
 
 return (
-    <div className="Container">
+    <div className="">
         <form onSubmit={handleConfirm} className="form">
-        <label className="Label">
+        <label className="form-label me-3 ms-3">
             Nombre: 
             <input
-            className="Input"
+            className="form-control"
             type="text"
             value={name}
             onChange={({ target }) => setName(target.value)}
         />
         </label>
-        <label className="Label">
+        <label className="form-label me-3">
             Telefono:
         <input
-            className="Input"
+            className="form-control"
             type="text"
             value={phone}
             onChange={({ target }) => setPhone(target.value)}
         />
         </label>
-        <label className="Label">
+        <label className="form-label me-3">
             Email:
         <input
-            className="Input"
+            className="form-control"
             type="text"
             value={email}
             onChange={({ target }) => setEmail(target.value)} 
         />
         </label>
-        <div className="Label">
-            <button type="submit" className="Button">
+        <div>
+            <button type="submit" className="btn btn-success m-3">
             Crear Orden
             </button>
         </div>
-        </form>
+        </form> 
     </div>
     );
 };

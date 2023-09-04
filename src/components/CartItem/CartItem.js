@@ -5,35 +5,16 @@ export const CartItem = ({id,price,image,title,quantity}) => {
     const { removeItem} = useContext(CartContext)
 
     return(
-        <article>
-            <header>
-                <h2>
-                    {title}
-                </h2>
-            </header>
-
-            <picture>
-                <img src={image} alt={title}/>
-            </picture>
-            <section>
-                <h3>
-                    Precio: ${price}
-                </h3>
-            </section>
-
-            <section>
-                <h4>
-                    Cantidad: {quantity}
-                </h4>
-            </section>
-            <section>
-                Subtotal: ${price * quantity}
-            </section>
-
-            <section>
-                <button className="btn btn-danger" onClick={() => removeItem(id)}>Eliminar</button>
-            </section>
-        </article>
+        <div className="card m-3" style={{width: '30rem'}}>
+        <h5 className="card-title ms-3">{title}</h5>
+        <img src={image} className="card-img-top ms-3" alt={title}/>
+        <div className="card-body">
+            <p className="card-text">Precio: ${price}</p>
+            <p className="card-text">Cantidad: {quantity}</p>
+            <p className="card-text">Subtotal: ${price * quantity}</p>
+        </div>
+        <button className="btn btn-danger" onClick={() => removeItem(id)}>Eliminar</button>
+    </div>
     )
 }
 

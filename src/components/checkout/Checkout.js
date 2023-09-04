@@ -70,11 +70,11 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1>Se está generando su orden...</h1>;
+        return <h1 className="d-flex justify-content-center mt-5">Se está generando su orden...</h1>;
     }
 
     if (orderId) {
-        return <h1>El Id de su orden es: {orderId}</h1>;
+        return <h1 className="d-flex justify-content-center aling-items-center mt-5">El Id de su orden es: {orderId}</h1>;
     }
 
     return (

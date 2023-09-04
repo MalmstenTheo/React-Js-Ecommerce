@@ -16,15 +16,13 @@ const ItemDetailContainer = () =>{
             setProduct(
                 {...response.data(), id: response.id}
             );
-            
-            
         })
         
     }, [itemId]  
     ); 
     
     return(
-        <div className="ItemDetailContainer">
+        <div className="ItemDetailContainer d-flex justify-content-center mt-5">
             <ItemDetail {...product} />
         </div>
     )

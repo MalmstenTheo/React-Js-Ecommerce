@@ -20,36 +20,25 @@ const ItemDetail = ({ id, title, image, category, description, price, stock }) =
     }
 
     return (
-        <article>
-            <header>
-                <h2>
-                    {title}
-                </h2>
-            </header>
-            <picture>
-                <img src={image} alt={title}/>
-            </picture>
-            <section>
-                <p>
-                    Categoria: {category}
-                </p>
-                <p>
-                    Descripcion: {description}
-                </p>
-                <p>
-                    Precio: ${price}
-                </p>
-            </section>
-            <footer>
+        <div className="card" style={{width: '20rem'}}>
+            <img src={image} className="card-img-top" alt={title}/>
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">Categoria: {category}</p>
+                <p className="card-text">{description}</p>
+                <p className="card-text">Precio: ${price}</p>
+
+                <footer>
                 {
                     quantityAdded > 0 ? (
-                        <Link to='/cart'>Terminar compra</Link>
+                        <Link to='/cart' className="btn btn-success">Terminar compra</Link>
                     ) : (
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                     )
                 }
             </footer>
-        </article>
+            </div>
+        </div>
     )
 }
 
